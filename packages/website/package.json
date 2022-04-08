@@ -2,8 +2,10 @@
   "name": "website",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "type-check": "tsc --pretty --noEmit",
     "build": "next build",
+    "build:deps": "yarn workspaces foreach -ptRv --exclude website run build",
+    "dev": "next dev",
     "start": "next start",
     "lint": "next lint"
   },

@@ -5,7 +5,12 @@
   "license": "UNLICENSED",
   "private": true,
   "scripts": {
-    "postinstall": "husky install"
+    "type-check": "yarn workspaces foreach -ptv run type-check",
+    "clean": "yarn workspaces foreach -pv run clean",
+    "build": "yarn workspaces foreach -ptv run build",
+    "postinstall": "husky install",
+    "lint": "yarn workspaces foreach -pv run lint",
+    "test": "yarn workspaces foreach -pv run test"
   },
   "workspaces": [
     "packages/**"
