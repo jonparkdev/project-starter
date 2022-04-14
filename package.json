@@ -22,6 +22,7 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,md,html,css}": [
+      "yarn lint",
       "yarn prettier --write"
     ]
   }
